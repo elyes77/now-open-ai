@@ -10,7 +10,7 @@
         <sys_policy/>
         <sys_scope display_value="Now Open AI">8cef619b47f3d110042e8c38c26d433a</sys_scope>
         <sys_update_name>sys_properties_category_d15cae6f47f71510042e8c38c26d436c</sys_update_name>
-        <title><![CDATA[<h3><img style="float: left;" src="/sys_attachment.do?sys_id&#61;36e33a67473b1510042e8c38c26d431a" alt="" width="200" height="59" /></h3>
+        <title><![CDATA[<h3><img style="float: left;" src="/x_307427_now_open.open-ai-properties.png" alt="" width="200" height="59" /></h3>
 <h3> </h3>
 <h3> </h3>
 <p style="margin: 0in 0in 8pt; line-height: 107%; font-size: 11pt; font-family: Calibri, sans-serif;">OpenAI provides a suite of APIs that allow users to generate text, translate text, and generate text completions using machine learning models. When making a request to one of these APIs, there are several attributes that can be included in the request to customize the behavior of the API. Here is a list of some of the common request attributes that are available:</p>

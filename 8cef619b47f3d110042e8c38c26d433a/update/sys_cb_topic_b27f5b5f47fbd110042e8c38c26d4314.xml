@@ -49,7 +49,7 @@
           "stepType": "Prompt",
           "name": "prompt",
           "prompt": {
-            "value": "(function execute() {\n    return 'Lestining...';\n})()\n",
+            "value": "(function execute() {\n    return '🤖 Listening...';\n})()\n",
             "mode": "script"
           },
           "confirmMessage": {

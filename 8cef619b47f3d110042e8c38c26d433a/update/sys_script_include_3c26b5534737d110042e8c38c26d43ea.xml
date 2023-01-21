@@ -15,7 +15,7 @@ openaiUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	OPEN_AI_MAX_TOKENS: +gs.getProperty("x_307427_now_open.open.ai.api.max.tokens"),
 	OPEN_AI_TEMPERATURE: +gs.getProperty("x_307427_now_open.open.ai.api.temperature"),
 	OPEN_AI_BLACK_LIST: gs.getProperty("x_307427_now_open.open.ai.api.blacklist.keywords"),
-	LOG_ON: false,
+	LOG_ON: true,
 	MAX_TIMEOUT: 3000,
 	
 	getOpenAIResponse:function(recOAIA){
@@ -146,13 +146,20 @@ openaiUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	},
 	
 	saveHistory:function(id, prompt, response){
-		
+		var flagged= false;
 		var flag= "";
 		var blk= this.OPEN_AI_BLACK_LIST.toLowerCase().split(",") || [];
 
-		var flagged= blk.length && blk.some(function(keyword){
-			return prompt.toLowerCase().search(keyword) != -1;
-		});
+		if(blk != ""){
+			flagged= blk.some(function(keyword){
+				return prompt.toLowerCase().search(keyword) != -1;
+			});
+		}
+
+		if(this.LOG_ON){
+			//level05
+			gs.info("level05 ---> " + flagged);
+		}
 
 		if (flagged) {
 			flag= "inappropriate";
