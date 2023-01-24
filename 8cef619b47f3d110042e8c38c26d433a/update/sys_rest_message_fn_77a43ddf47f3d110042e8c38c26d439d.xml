@@ -4,7 +4,11 @@
         <basic_auth_password/>
         <basic_auth_profile/>
         <basic_auth_user/>
-        <content/>
+        <content>{&#13;
+    "prompt": "What is the capital of France?",&#13;
+    "model": "text-davinci-002",&#13;
+    "temperature": 0.5&#13;
+}</content>
         <function_name>POST</function_name>
         <http_method>post</http_method>
         <lock>false</lock>
